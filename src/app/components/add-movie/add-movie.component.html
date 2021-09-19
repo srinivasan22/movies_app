@@ -1,0 +1,63 @@
+<!-- Title group  -->
+<div class="title-group">
+  <h1 class="mat-h1">Add Movie</h1>
+  <mat-divider fxFlex="1 0"></mat-divider>
+</div>
+
+<!-- Form -->
+<div class="inner-wrapper">
+  <form [formGroup]="movieForm" (ngSubmit)="submitMovieForm()" #resetMovieForm="ngForm" novalidate>
+    <!-- Left block -->
+    <mat-card>
+      <div class="controlers-wrapper">
+        <!-- Movie Name -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Movie name" formControlName="movie_name">
+          <mat-error *ngIf="handleError('movie_name', 'required')">
+            You must provide a<strong> movie name</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Release Year -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Release Year" formControlName="release_year">
+          <mat-error *ngIf="handleError('release_year', 'required')">
+            You must provide a<strong> release year</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card>
+
+    <!-- Right block -->
+    <mat-card>
+        <!-- Genre -->
+        <mat-form-field>
+          <mat-label>Genre</mat-label>
+          <mat-select [(value)]="selected" formControlName="genre">
+            <mat-option [value]="genreArray" *ngFor="let genreArray of GenreArray">{{genreArray}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="handleError('genre', 'required')">
+            Genre is required
+          </mat-error>
+        </mat-form-field>
+        <!-- Famous -->
+        <div class="misc-bottom-padding">
+          <mat-label>Famous:</mat-label>
+          <mat-radio-group aria-label="Select an option" formControlName="famous">
+            <mat-radio-button value="Yes">Yes</mat-radio-button>
+            <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+    </mat-card>
+
+    <!-- Submit & Reset -->
+    <mat-card>
+      <div class="full-wrapper button-wrapper">
+        <div class="button-wrapper">
+          <button mat-flat-button color="warn">Submit</button>
+        </div>
+      </div>
+    </mat-card>
+  </form>
+</div>
