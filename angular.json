@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular8-meanstack-angular-material": {
+    "movies_app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular8-meanstack-angular-material",
+            "outputPath": "dist/movies_app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -59,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular8-meanstack-angular-material:build"
+            "browserTarget": "movies_app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular8-meanstack-angular-material:build:production"
+              "browserTarget": "movies_app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular8-meanstack-angular-material:build"
+            "browserTarget": "movies_app:build"
           }
         },
         "test": {
@@ -105,7 +105,7 @@
         }
       }
     },
-    "angular8-meanstack-angular-material-e2e": {
+    "movies_app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -114,11 +114,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular8-meanstack-angular-material:serve"
+            "devServerTarget": "movies_app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular8-meanstack-angular-material:serve:production"
+              "devServerTarget": "movies_app:serve:production"
             }
           }
         },
@@ -134,5 +134,5 @@
       }
     }
   },
-  "defaultProject": "angular8-meanstack-angular-material"
+  "defaultProject": "movies_app"
 }

@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 
 // Setting up static directory
-app.use(express.static(path.join(__dirname, 'dist/angular8-meanstack-angular-material')));
+app.use(express.static(path.join(__dirname, 'dist/movies_app')));
 
 
 // RESTful API root
@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/angular8-meanstack-angular-material/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/movies_app/index.html'));
 });
 
 // error handler

@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to angular8-meanstack-angular-material!');
+    expect(page.getTitleText()).toEqual('Welcome to Movies App!');
   });
 
   afterEach(async () => {

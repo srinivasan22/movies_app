@@ -1,5 +1,5 @@
 {
-  "name": "angular8-meanstack-angular-material",
+  "name": "movies_app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
